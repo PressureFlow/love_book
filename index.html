@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наша история</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Экран-замок -->
+  <div id="lock-screen" class="lock-screen">
+    <div class="lock-box">
+      <h2>Только для двоих</h2>
+      <p>Введи нашу дату (ДД.ММ.ГГГГ):</p>
+      <input type="text" id="pass-input" placeholder="01.01.2025">
+      <button onclick="unlockBook()">Открыть книгу</button>
+      <span id="error-msg"></span>
+    </div>
+  </div>
+
+  <!-- Аудио -->
+  <button id="music-btn" class="music-btn" onclick="toggleMusic()">🎵 Включить музыку</button>
+  <audio id="bg-music" loop src="assets/audio/Izzamuzzic, Julien Marchal Shootout.mp3"></audio>
+  <audio id="flip-sound" src="assets/audio/page-flip.mp3"></audio>
+
+  <!-- Контейнер книги (заполнится автоматически через JS) -->
+  <div class="book-wrapper">
+    <div id="book"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

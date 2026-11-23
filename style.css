@@ -1,0 +1,157 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #2c241e; /* Темный деревянный стол на фоне */
+  background-image: radial-gradient(circle, #3e3229 0%, #1c1613 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lora', serif;
+  overflow: hidden;
+}
+
+.book-wrapper {
+  width: 95vw;
+  max-width: 900px;
+  height: 80vh;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Текстура бумажной страницы */
+.page {
+  background-color: #fdfbf7;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0) 8%);
+  border: 1px solid #e0d8c8;
+  padding: 25px;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.03);
+}
+
+/* Твердая обложка */
+.page-cover {
+  background: #4a1c24; /* Бордовый переплет */
+  background-image: linear-gradient(135deg, #5e232d 0%, #361218 100%);
+  color: #f3d9b1;
+  border: 2px solid #2b0d12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cover-content {
+  border: 2px solid rgba(243, 217, 177, 0.4);
+  padding: 40px 20px;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-content h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.subtitle { font-style: italic; opacity: 0.8; }
+.hint { margin-top: auto; font-size: 0.9rem; opacity: 0.7; }
+
+/* Оформление фото в стиле Polaroid */
+.page-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 25px 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transform: rotate(-1.5deg);
+  max-width: 90%;
+}
+
+.polaroid img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  display: block;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 8px;
+}
+
+.story-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #3a322d;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.page-number { font-size: 0.85rem; color: #998f85; }
+
+/* Экран блокировки и кнопки */
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 12, 0.95);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f3d9b1;
+}
+
+.lock-box {
+  background: #2b221c;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #5c493d;
+}
+
+.lock-box input {
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.lock-box button, .music-btn {
+  background: #7a2e3b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.music-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 50;
+  font-size: 0.85rem;
+}
+
+.dev-sign {
+  margin-top: auto;
+  font-family: monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
